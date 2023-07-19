@@ -43,7 +43,7 @@ public class AlunoController {
   public ModelAndView alterar(@PathVariable("id") Integer id) {
     ModelAndView mv = new ModelAndView();
     mv.setViewName("aluno_pasta/alterar");
-    Aluno aluno = alunorepositorio.getOne(id);
+    Aluno aluno = alunorepositorio.getReferenceById(id);
     mv.addObject("aluno", aluno);
     return mv;
   }
