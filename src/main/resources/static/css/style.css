@@ -1,0 +1,129 @@
+:root {
+  --roxo: #4527a0;
+  --rosa: #a55eea;
+  --preto: #333;
+}
+
+* {
+  margin: 0px;
+  padding: 0px;
+  box-sizing: border-box;
+  color: #ffff;
+}
+nav {
+  height: 90px;
+}
+.navbar {
+  background: var(--roxo);
+}
+nav a {
+  color: #ffffff;
+}
+nav a:hover {
+  color: #dcc8ec;
+}
+a {
+  cursor: pointer;
+  font-weight: bold;
+}
+.neo-section {
+  background-image: url(../img/fundo.jpg);
+  height: 100vh;
+  background-size: cover !important;
+  background-position: center;
+  background-repeat: no-repeat;
+  width: 100%;
+  padding: 30px;
+  position: relative;
+}
+.neo-section-lista {
+  /* height: 100vh; */
+  background-image: url(../img/fundo_footer.png);
+  background-size: cover !important;
+  background-position: center;
+  background-repeat: repeat-y;
+  width: 100%;
+  padding: 30px;
+  position: relative;
+}
+
+.botoes {
+  display: flex;
+  justify-content: center;
+  padding: 10px 20px;
+}
+.botao {
+  margin: 0 20px;
+}
+.btn-success {
+  background-color: transparent;
+}
+.btn-success:hover {
+  background-color: #76ff03 !important;
+}
+.btn {
+  width: 200px;
+  color: #ffff;
+  border-radius: 10px;
+  border: 3px solid var(--rosa);
+  z-index: 2;
+  font-weight: bold;
+}
+.btn:hover {
+  border: 2px solid var(--roxo);
+  background-color: var(--roxo);
+}
+.neo-container {
+  max-width: 1280px;
+  padding: 2% 2%;
+  margin: 0 auto;
+  margin-top: 250px;
+}
+.center-text {
+  text-align: center;
+}
+.neo-section > .neo-container {
+  position: relative;
+}
+.container {
+  position: relative;
+}
+.texto-centro {
+  font-size: 3rem;
+  font-family: "Ubuntu";
+}
+select.form-control {
+  color: var(--preto);
+}
+select.form-control option {
+  color: var(--preto);
+}
+/* Estilizando o option selecionado */
+select.form-control option:checked {
+  color: var(--preto);
+}
+
+/* Resposividade */
+
+@media (max-width: 991px) {
+  nav {
+    height: auto;
+  }
+}
+@media (max-width: 450px) {
+  .botoes {
+    display: block;
+    box-sizing: border-box;
+    padding: 0px;
+    margin: 0 auto;
+  }
+  .botao {
+    margin-bottom: 15px;
+  }
+  .texto-centro {
+    font-size: 1.5rem;
+  }
+  nav {
+    height: auto;
+  }
+}
