@@ -10,6 +10,31 @@
   box-sizing: border-box;
   color: #ffff;
 }
+a {
+  color: #ffff;
+  text-decoration: none;
+}
+a:hover {
+  color: #ffff;
+  text-decoration: none;
+}
+a:visited {
+  color: inherit;
+}
+html,
+body {
+  height: 100%;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  background-image: url(../img/fundo_footer.png);
+  background-repeat: no-repeat;
+  background-position: center center;
+  background-attachment: fixed;
+  background-size: cover;
+}
 nav {
   height: 90px;
 }
@@ -36,17 +61,6 @@ a {
   padding: 30px;
   position: relative;
 }
-.neo-section-lista {
-  /* height: 100vh; */
-  background-image: url(../img/fundo_footer.png);
-  background-size: cover !important;
-  background-position: center;
-  background-repeat: repeat-y;
-  width: 100%;
-  padding: 30px;
-  position: relative;
-}
-
 .botoes {
   display: flex;
   justify-content: center;
