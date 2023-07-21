@@ -33,9 +33,14 @@
         <a class="nav-item nav-link" th:href="@{/}"><i class="fa-solid fa-house"></i> Home</a>
         <a class="nav-item nav-link" th:href="@{inserirAlunos}"><i class="fa-solid fa-user-graduate"></i> Cadastrar
           Aluno</a>
-        <a class="nav-item nav-link" th:href="@{alunos}"><i class="fa-solid fa-magnifying-glass"></i> Pesquisar
-          Aluno</a>
+        <!-- id usa # -->
+        
+        <a data-toggle="modal" data-target="#modalPesquisa" class="nav-item nav-link"><i
+            class="fa-solid fa-magnifying-glass"></i> Pesquisar Aluno</a>
+
+
         <a class="nav-item nav-link btn-danger" href="">Sair</a>
+
       </div>
     </nav>
   </header>

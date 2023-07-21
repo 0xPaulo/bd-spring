@@ -5,7 +5,7 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <meta name="author" content="inu" />
-  <title>Lista Alunos</title>
+  <title>Inativos Alunos</title>
   <link rel="stylesheet" href="/webjars/bootstrap/css/bootstrap.min.css" />
   <link rel="stylesheet" href="/css/style.css" />
   <script src="https://kit.fontawesome.com/d8b2664129.js" crossorigin="anonymous"></script>
@@ -34,7 +34,7 @@
           <th scope="col">Ação</th>
         </thead>
         <tbody>
-          <tr scope="row" th:each="aluno : ${listaAlunos}">
+          <tr scope="row" th:each="aluno : ${alunosInativoObj}">
             <td th:text="${aluno.nome}"></td>
             <td th:text="${aluno.curso}"></td>
             <td th:text="${aluno.matricula}"></td>

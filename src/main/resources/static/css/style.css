@@ -51,6 +51,10 @@ a {
   cursor: pointer;
   font-weight: bold;
 }
+.neo-section-lista {
+  margin-top: 150px;
+}
+
 .neo-section {
   background-image: url(../img/fundo.jpg);
   height: 100vh;

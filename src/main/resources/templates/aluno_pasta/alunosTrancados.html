@@ -5,7 +5,7 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <meta name="author" content="inu" />
-  <title>Lista Alunos</title>
+  <title>Trancados Alunos</title>
   <link rel="stylesheet" href="/webjars/bootstrap/css/bootstrap.min.css" />
   <link rel="stylesheet" href="/css/style.css" />
   <script src="https://kit.fontawesome.com/d8b2664129.js" crossorigin="anonymous"></script>
@@ -22,7 +22,7 @@
   <!-- Fim Header -->
   <section class="neo-section-lista">
     <div class="container" style="margin-top: 100px;">
-      <h3>Ultimos alunos Adicionados</h3>
+      <h3>Ultimos alunos Trancados</h3>
       <hr>
       <table class="table thead-light  table-hover ">
         <thead>
@@ -34,7 +34,7 @@
           <th scope="col">Ação</th>
         </thead>
         <tbody>
-          <tr scope="row" th:each="aluno : ${listaAlunos}">
+          <tr scope="row" th:each="aluno : ${alunosTrancadosObj}">
             <td th:text="${aluno.nome}"></td>
             <td th:text="${aluno.curso}"></td>
             <td th:text="${aluno.matricula}"></td>
