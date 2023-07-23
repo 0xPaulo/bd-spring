@@ -7,14 +7,18 @@ import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.servlet.ModelAndView;
 
 import br.com.academy.dao.UsuarioDao;
-import br.com.academy.model.Aluno;
+// import br.com.academy.model.Aluno;
 import br.com.academy.model.Usuario;
+import br.com.academy.service.ServiceUsuario;
 
 @Controller
 public class UsuarioController {
 
+  // @Autowired
+  // private UsuarioDao usuarioRepositorio;
+
   @Autowired
-  private UsuarioDao usuarioRepositorio;
+  private ServiceUsuario serviceUsuario;
 
   @GetMapping(value = "/")
   public ModelAndView login() {
@@ -32,9 +36,9 @@ public class UsuarioController {
   }
 
   @PostMapping("salvaUsuario")
-  public ModelAndView cadastrar(Usuario usuario) {
+  public ModelAndView cadastrar(Usuario usuario) throws Exception {
     ModelAndView mv = new ModelAndView();
-    usuarioRepositorio.save(usuario);
+    serviceUsuario.salvarUsuario(usuario);
     mv.setViewName("redirect:/");
     return mv;
   }
