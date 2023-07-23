@@ -1,0 +1,47 @@
+.Login-Form {
+  min-height: 100vh;
+  background-image: url(../img/fundo.jpg);
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+}
+
+.main-div {
+  background-color: #ffffff;
+  border-radius: 5px;
+  margin: 0 auto;
+  max-width: 50%; /* Alterado para ocupar toda a largura */
+  padding: 20px; /* Reduzido o espaçamento interno */
+}
+.form-control{
+  background: #f7f7f7;
+  border-radius: 7px;
+  font-size: 15px;
+  height: 50px;
+  line-height: 50px;
+  border: 2px solid #d4d4d4;
+}
+.form-group{
+  margin: 10px;
+}
+.btn-primary{
+  background: #512da8;
+  border-color: #d4d4d4;
+  font-size: 1.1em;
+  padding: 0;
+  height: 50px;
+  width: 100%;
+  /* margin: 10px; */
+}
+.btn-info{
+  background: #7e57e2;
+  border-color: #d4d4d4;
+  font-size: 1em;
+  padding: 0;
+  height: 40px;
+  width: 50%;
+}

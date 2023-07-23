@@ -34,7 +34,7 @@
         <a class="nav-item nav-link" th:href="@{inserirAlunos}"><i class="fa-solid fa-user-graduate"></i> Cadastrar
           Aluno</a>
         <!-- id usa # -->
-        
+
         <a data-toggle="modal" data-target="#modalPesquisa" class="nav-item nav-link"><i
             class="fa-solid fa-magnifying-glass"></i> Pesquisar Aluno</a>
 
@@ -46,6 +46,31 @@
   </header>
 
 
+  <!-- Inicio Moddal -->
+  <div th:fragment="modal">
+    <div class="modal fade" id="modalPesquisa">
+      <div class="modal-dialog modal-lg">
+        <div class="modal-content">
+          <div class="modal-header ">
+
+            <h5 class="modal-title">Encontre um aluno</h5>
+            <button type="button" class="close" data-dismiss="modal">
+              <span>&times;</span>
+            </button>
+          </div>
+          <form method="post" action="pesquisar-aluno" th:object="${aluno}">
+            <div class="modal-body">
+              <input type="text" th:field="*{nome}" class="form-control " placeholder="Digite o nome do aluno..">
+            </div>
+            <div class="modal-footer">
+              <button class="btn btn-danger " data-dismiss="modal">Fechar</button>
+              <button type="submit" class="btn btn-success">Pesquisar</button>
+            </div>
+          </form>
+        </div>
+      </div>
+    </div>
+  </div>
   <script src="/webjars/jquery/3.6.4/jquery.min.js"></script>
   <script src="/webjars/bootstrap/js/bootstrap.min.js"></script>
 </body>
