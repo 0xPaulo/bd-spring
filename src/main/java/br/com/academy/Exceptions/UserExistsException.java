@@ -1,8 +1,8 @@
 package br.com.academy.Exceptions;
 
-public class EmailExistsException extends Exception {
+public class UserExistsException extends Exception {
 
-  public EmailExistsException(String message) {
+  public UserExistsException(String message) {
     super(message);
   }
 

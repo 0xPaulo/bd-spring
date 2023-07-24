@@ -1,11 +1,11 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="pt-BR" xmlns:th="http://www.thymeleaf.org">
 
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <meta name="author" content="inu" />
-  <title>Cadastro</title>
+  <title>Cadastro de usuario</title>
   <link rel="stylesheet" href="/webjars/bootstrap/css/bootstrap.min.css" />
   <link rel="stylesheet" href="/css/login.css" />
   <script src="https://kit.fontawesome.com/d8b2664129.js" crossorigin="anonymous"></script>
@@ -24,7 +24,11 @@
           <h2>Cadastro de Usuario</h2>
           <p>Crie seu cadastro no sistema</p>
         </div>
-        <form method="post" action="/salvaUsuario" th:object="${usuario}">
+
+        <form method="post" action="/cadastrar-usuario" th:object="${usuario}">
+          <div th:if="${emailError}" class="alert alert-warning">
+            <p th:text="${emailError}"></p>
+          </div>
           <div class="form-group">
             <input type="text" class="form-control" th:field="*{user}" placeholder="digite seu nome de usuario">
           </div>
@@ -36,7 +40,7 @@
           </div>
 
           <button type="submit" class="btn btn-primary m-lg-2 ">Cadastrar</button>
-          <button type="button" class="btn btn-info">Voltar</button>
+          <a th:href="@{/}"><button type="button" class="btn btn-info">Voltar</button></a>
       </div>
     </div>
   </div>

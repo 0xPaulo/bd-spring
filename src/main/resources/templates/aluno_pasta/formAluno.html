@@ -53,7 +53,7 @@
               <label class="validation-message" th:errors="*{matricula}"></label>
             </div>
             <label>Gerar Matricula: </label>
-            <input class="form-control " id="matricula" th:field="*{matricula}">
+            <input class="form-control " id="matricula" th:field="*{matricula}" readonly >
             <button type="button" onclick="GerarMatricula();" class="btn btn-outline-dark"
               style="margin-top: 10px;">Gerar</button>
           </div>

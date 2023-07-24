@@ -17,7 +17,7 @@
   max-width: 50%; /* Alterado para ocupar toda a largura */
   padding: 20px; /* Reduzido o espaçamento interno */
 }
-.form-control{
+.form-control {
   background: #f7f7f7;
   border-radius: 7px;
   font-size: 15px;
@@ -25,10 +25,10 @@
   line-height: 50px;
   border: 2px solid #d4d4d4;
 }
-.form-group{
+.form-group {
   margin: 10px;
 }
-.btn-primary{
+.btn-primary {
   background: #512da8;
   border-color: #d4d4d4;
   font-size: 1.1em;
@@ -37,11 +37,14 @@
   width: 100%;
   /* margin: 10px; */
 }
-.btn-info{
+.btn-info {
   background: #7e57e2;
   border-color: #d4d4d4;
   font-size: 1em;
   padding: 0;
   height: 40px;
   width: 50%;
+}
+.cadastro p {
+  margin: 0 !important;
 }
