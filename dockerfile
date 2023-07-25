@@ -1,6 +1,6 @@
-FROM maven:3.8.5-openjdk-17 as Build
+FROM maven:3.8.7-openjdk-17 as Build
 COPY . .
-RUN mvm clean package -DskipTests
+RUN mvn clean package -DskipTests
 
 FROM openjdk:17.0.1-jdk-slim
 COPY --from=Build /target/academy-0.0.1-SNAPSHOT.jar academy.jar
