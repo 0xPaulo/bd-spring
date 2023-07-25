@@ -38,8 +38,13 @@
         <a data-toggle="modal" data-target="#modalPesquisa" class="nav-item nav-link"><i
             class="fa-solid fa-magnifying-glass"></i> Pesquisar Aluno</a>
 
+        <div th:if="${session.usuarioLogado != null}">
+          <span class="nav-item nav-link" th:text="${session.usuarioLogado}"></span>
+        </div>
 
-        <a class="nav-item nav-link btn-danger" th:href="@{/}">Sair</a>
+        <form action="/logout" method="post">
+          <button type="submit" class="nav-item nav-link btn-danger">Sair</button>
+        </form>
 
       </div>
     </nav>

@@ -6,5 +6,4 @@ public class CriptoExistsException extends Exception {
     super(message);
   }
   private static final long serialVersionUID = 1L;
-
 }
