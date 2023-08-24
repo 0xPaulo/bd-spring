@@ -2,23 +2,19 @@ package br.com.academy.controllers;
 
 import java.security.NoSuchAlgorithmException;
 import javax.servlet.http.HttpSession;
-import javax.validation.Valid;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
-import org.springframework.validation.BindingResult;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.ModelAttribute;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.servlet.ModelAndView;
 import br.com.academy.Exceptions.EmailExistsException;
-import br.com.academy.Exceptions.ServiceExc;
 import br.com.academy.Exceptions.UserExistsException;
 import br.com.academy.model.Aluno;
 import br.com.academy.model.Usuario;
 import br.com.academy.service.ServiceCadastroUsuario;
 import br.com.academy.service.ServiceLogarUsuario;
-import br.com.academy.util.Util;
 
 @Controller
 public class UsuarioController {
@@ -95,25 +91,3 @@ public class UsuarioController {
     return login();
   }
 }
-
-// @PostMapping("/login")
-// public ModelAndView login(@Valid Usuario usuario, BindingResult br,
-// HttpSession session)
-// throws NoSuchAlgorithmException, ServiceExc {
-// ModelAndView mv = new ModelAndView();
-// mv.addObject("usuario", new Usuario());
-// if (br.hasErrors()) {
-// mv.setViewName("login_pasta/login");
-// }
-// Usuario userLogin = serviceLogarUsuario.Logar(usuario.getUser(),
-// Util.md5(usuario.getSenha()));
-// if (userLogin == null) {
-// mv.addObject("msg", "Usuario nao encontrado. Tente novamente");
-// } else {
-// session.setAttribute("usuarioLogado", userLogin);
-// return index();
-// }
-// return mv;
-// }
-
-// }
